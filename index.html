@@ -1,6 +1,14 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -9,16 +17,316 @@
 
 
 <!DOCTYPE html>
+<script>
+$(".navbarText").hover(function() {
+	$(this).stop().animate({
+		color:'#61b5d3'
+	}, 200);
+}, function() {
+	$(this).stop().animate({
+		color: 'white'
+	}, 200)
+});
+
+
+$("i").hover(function() {
+
+	$(this).stop().animate({
+
+		color:'white'
+
+	}, 200)
+
+}, function() {
+
+	$(this).stop().animate({
+
+		color:'#c0c0c0'
+
+	}, 200)
+
+})
+
+
+$(document).ready(function(){
+
+
+  $(".navbarText").on('click', function(event) {
+
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+
+
+      var hash = this.hash;  
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+
+
+</script>
+
 <html lang="en">
   <head>
     <meta charset="utf-8"> 
-	<img src="bike2.png">
-	<div class = "container">
-		<div class ="row">
-			<div class = "col-sm-4">Hello Hello Hello Hello Hello Hello Hello Hello Hello</div>
-			<div class = "col-sm-4">This is a text</div>
-			<div class = "col-sm-4">Hello Hello Hello Hello Hello Hello Hello Hello Hello</div>
+	<div class = "container-fluid">
+		<div class = "row-fluid">
+			<div class = "col-sm-2 navbarTextStyle"><a href="#AboutMeText" class = "navbarText">About Me</a></div>
+			<div class = "col-sm-2 navbarTextStyle"><a href="#ResearchText" class = "navbarText">Research</a></div>
+			<div class = "col-sm-2 navbarTextStyle"> <a href="#ProjectsText" class = "navbarText">Projects</a></div>
+			<div class = "col-sm-2 navbarTextStyle"> <a href="#ContactMeText" class = "navbarText">Contact Me</a></div>
 		</div>
+
+	
+		<div class = "row-fluid">
+			<div class = "col-sm-4 col-sm-offset-4" id = "CoverText"><br><br><br>Hi there! I'm <h1 id = "KevinText">Kevin Label</h1><br><br><br></div>
+		</div>
+	
+		<div class = "row-fluid">
+			<div class = "col-sm-12 mainbody">
+				<div class = "row">
+					<br><br>
+					<div class = "col-sm-3"></div>
+					<div class = "col-sm-6"><p id="AboutMeText" class="AboutMeText">Who am I?</p></div>
+					<div class = "col-sm-3"></div>
+				</div>
+				<div class = "row">
+					<div class = "col-sm-2"></div>
+					<div class = "col-sm-5"><p class = "AboutMeSubText">I am a 20 year-old data scientist and software engineer currently studying at Cal Poly, San Luis Obispo. I am in my third-year as a Computer Science major with a minor in Biology. I also work on-campus as a data science research assistant, teaching assistant for Systems Programming, and tutor with the Computer Science and Software Engineering Department. In my free time, I am an active member of the Cal Poly Triathlon Team.</p></div>
+					<div class = "col-sm-1"></div>
+					<div class = "col-sm-3"><img src="AboutMe.png" id = "AboutMeImage"></div>
+				</div>
+				<hr>
+				<div class = "row">
+					<br>
+					<div class = "col-sm-2"></div>
+					<div class = "col-sm-8"><p id="ResearchText">Research</p></p><span class="AboutMeSubText">My current research interests are in the fields of data science and bioinformatics.  I have been a research assistant at Cal Poly San Luis Obispo since September 2017, in the </span><a class="WebLink" href="https://www.calfishes.org/">lab</a><span class = "AboutMeSubText"> of Dr. Sean Lema. My primary work has consisted of performing PCA analyses and forming regression models in R to measure divergences in the morphology of marine populations. As some of our work is yet to be published, please contact me directly for any specific questions. </span></div>
+					<div class = "col-sm-2"></div>
+				</div>
+				
+				<hr>
+				<div class = "row">
+					<br>
+					<div class = "col-sm-2"></div>
+					<div class = "col-sm-8"><p id="ProjectsText">Projects</p></p><span class="AboutMeSubText">I have worked on a number of individual as well as academic projects, some of which can be viewed </span><a class="WebLink" href="https://github.com/kevinthe1st">here</a><span class = "AboutMeSubText"> (Many of my GitHub repositories are private due to academic restrictions or corporate security measures. For an extensive description of my projects please contact me directly). I was also a contributor to </span><a class="WebLink" href="http://www.deepseaannotations.com">deepseaannotations.com</a><span class = "AboutMeSubText">, a web-application tool created by Cal Poly to assist researchers in labeling and annotating videos. This tool allows researchers to easily generate a database of images that can later be used to train image-recognizing neural networks. Some of my other personal projects include assisting with the local San Luis Obispo startup, </span><a class="WebLink" href="http://www.housecallsmobile.com/">House Calls Mobile</a><span class = "AboutMeSubText">, being an officer and web coordinator for the </span> <a class="WebLink" href="https://calpolybiotech.wordpress.com">Cal Poly Biotech Club</a><span class = "AboutMeSubText">, and building an at-home musical light display using a Raspberry Pi. For a copy of my full resume, please contact me directly (contact info below).</span></div>
+					<div class = "col-sm-2"></div>
+				</div>
+				<hr>
+				
+				<div class = "row">
+					<div class = "col-sm-5"></div>
+					<div class = "col-sm-2" id = "ContactMeText">Contact me</div>
+					<div class = "col-sm-5"></div>
+					<br><br>
+					<div class="contactRibbon">
+						
+						<a href="https://www.facebook.com/profile.php?id=100006234284963" target="_blank">
+						  <div class="fa fa-facebook" aria-hidden="true"></div>
+						</a>
+
+						<a href="https://www.instagram.com/kevinlabel/">
+						  <div class="fa fa-instagram" aria-hidden="true"></div>
+						</a>
+
+						<a href="https://www.linkedin.com/in/kevinlabel/">
+						  <div class="fa fa-linkedin" aria-hidden="true"></div>
+						</a>
+
+
+						<a href="mailto:kevinlabel@outlook.com">
+						  <div class="fa fa-envelope" aria-hidden="true"></div>
+						</a>
+
+						<a href="https://github.com/kevinthe1st">
+						  <div class="fa fa-github" aria-hidden="true"></div>
+						</a>
+
+					 </div>
+				</div>
+			</div>
+		</div>
+		
+
+		
 	</div>
+
   </head>
 </html> 
+
+<style  type = "text/css">
+
+body {
+	margin: 0px auto;
+	padding: 0px;
+	margin-top: 15px;
+	background-attachment: fixed;
+	background-image: url("CoverPhoto6.png");
+	background-repeat:  no-repeat;
+	background-size: 100%
+	
+}
+
+#AboutMeImage {
+	width: 100%;
+}
+
+#ResearchText {
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Rubik';
+	color: #696969;
+}
+
+#ProjectsText {
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Rubik';
+	color: #696969;
+}
+
+#AboutMeText {
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Rubik';
+	color: #696969;
+}
+
+
+.AboutMeSubText {
+	text-align: justify;
+	font-size: 25px;
+	font-family: 'Thasadith';
+	color: black;
+}
+
+.WebLink {
+	text-align: justify;
+	font-size: 25px;
+	font-family: 'Thasadith';
+	text-decoration: underline;
+}
+
+.container-fluid {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.mainbody {
+	background-color: white;
+	clear: both;
+	width: 100%;
+}
+
+#CoverText {
+	color: white;
+	font-size: 50px;
+	font-family: 'Fjalla One', sans-serif;
+	font-style: italic;
+	
+}
+
+#KevinText {
+	color: white;
+	font-size: 80px;
+	font-family: 'Fjalla One', sans-serif;
+	font-style: normal;
+}
+
+#Background_Photo {
+	width: 100%;
+	position: absolute;
+	margin: 0 auto;
+	padding: 0;
+}
+#PersonalPhoto {
+	width: 100%;
+	margin: 0 auto;
+	float: right;
+	
+}
+
+#bike_img {
+	width: 100px;
+	height: 100px;
+}
+
+#bike_img2 {
+	width: 100px;
+	height: 900px;
+}
+
+#bike_img3 {
+	width: 100px;
+	height: 900px;
+}
+
+.navbarTextStyle {
+	color: black;
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+	
+}
+
+.navbarTextStyle a {
+	color: black;
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+}
+
+.navbarTextStyle a:link {
+	color: black;
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+.navbarTextStyle a:visited {
+	color: black;
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+.navbarTextStyle a:hover {
+	color: gray;
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+.contactRibbon {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  background-color: #2B60DE;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.fa {
+	color: white;
+	margin-left: 15px;
+	margin-right: 15px;
+	font-size: 30px;
+} 
+
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+#ContactMeText {
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+	text-decoration:  underline;
+}
+
+</style>
+
